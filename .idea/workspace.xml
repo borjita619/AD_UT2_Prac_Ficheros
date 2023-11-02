@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="810b8fae-bfdd-443c-8a15-75d9d32a536b" name="Changes" comment="Interfaz creada">
+    <list default="true" id="810b8fae-bfdd-443c-8a15-75d9d32a536b" name="Changes" comment="Cambios en los botones">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Fichero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Fichero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/Ventana1.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/Ventana1.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/AnalizadorFicheros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/AnalizadorFicheros.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/View/Ventana1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/Ventana1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,23 +35,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "304",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Lenovo/Desktop/2º DAM/Acceso a datos/Proyectos Java/AD_UT2_Practica_Ficheros_BorjaGL",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;304&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/Desktop/2º DAM/Acceso a datos/Proyectos Java/AD_UT2_Practica_Ficheros_BorjaGL&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Ventana1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="View.Ventana1" />
@@ -88,6 +87,10 @@
       <workItem from="1698049296013" duration="2560000" />
       <workItem from="1698215655616" duration="5958000" />
       <workItem from="1698305504417" duration="4634000" />
+      <workItem from="1698395619409" duration="5104000" />
+      <workItem from="1698658031152" duration="984000" />
+      <workItem from="1698659358462" duration="964000" />
+      <workItem from="1698913811821" duration="4499000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion de repositorio">
       <option name="closed" value="true" />
@@ -113,7 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698049367425</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Cambios en los botones">
+      <option name="closed" value="true" />
+      <created>1698395659460</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698395659460</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +145,7 @@
     <MESSAGE value="Creacion de repositorio" />
     <MESSAGE value="Cambio temática trabajo a máquinas gimnasio" />
     <MESSAGE value="Interfaz creada" />
-    <option name="LAST_COMMIT_MESSAGE" value="Interfaz creada" />
+    <MESSAGE value="Cambios en los botones" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios en los botones" />
   </component>
 </project>

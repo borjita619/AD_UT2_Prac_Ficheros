@@ -1,5 +1,7 @@
 package View;
 
+import Controller.AnalizadorFicheros;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -20,7 +22,7 @@ public class Ventana1 extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 JFileChooser fileChooser = new JFileChooser();
-                fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
+                fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 
                 int result = fileChooser.showOpenDialog(null);
 
@@ -28,12 +30,18 @@ public class Ventana1 extends JFrame {
 
                     File fileName = fileChooser.getSelectedFile();
 
-                    if ((fileName == null) || (fileName.getName().equals(""))) {
+                    if ((fileName == null) || (fileName.getName().isEmpty())) {
                         textFieldRutaActual.setText("...");
                     } else {
                         textFieldRutaActual.setText(fileName.getAbsolutePath());
                     }
                 }
+            }
+        });
+        analizarButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                AnalizadorFicheros.analizarRuta(textFieldRutaActual.getText());
             }
         });
     }
