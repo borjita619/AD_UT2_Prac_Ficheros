@@ -23,17 +23,17 @@ public class AnalizadorFicheros {
     public static Object[][] analizarRuta(String ruta) {
         fichero = new File(ruta);
         listado = fichero.list();
+        Object[][] infoFicheros = new Object[listado.length][6]; // 6 columnas: id, nombre, fecha, tamaño, SHA1, MD5
+        int indice = 0;
+        long tamanio;
+
         if (listado != null) {
             for (String s : listado) {
                 ficheroContenido = new File(fichero.getAbsolutePath(), s);
-                if (ficheroContenido.isDirectory()) {
-                    System.out.println("\t(D)" + s);
-                } else {
-                    System.out.println("\t(F)" + s);
+                if (ficheroContenido.isFile()) {
                     ms = ficheroContenido.lastModified();
                     d = new Date(ms);
                     c = new GregorianCalendar();
-                    // Conversión del formato fecha hora del sistema al Gregoriano (habitual)
                     c.setTime(d);
                     dia = Integer.toString(c.get(Calendar.DATE));
                     mes = Integer.toString(c.get(Calendar.MONTH));
@@ -41,15 +41,22 @@ public class AnalizadorFicheros {
                     hora = Integer.toString(c.get(Calendar.HOUR_OF_DAY));
                     minuto = Integer.toString(c.get(Calendar.MINUTE));
                     segundo = Integer.toString(c.get(Calendar.SECOND));
-                    System.out.print("\t\tFecha modif: " + dia + "-" + mes + "-" + year + " " + hora + ":" + minuto + ":" + segundo);
-                    System.out.println("\t\tTamaño: " + ficheroContenido.length() + " bytes");
-                    System.out.println("\t\tSHA1: " + generarMD5oSHA1DeFichero(ficheroContenido.getAbsolutePath(),"SHA") );
-                    System.out.println("\t\tMD5: " + generarMD5oSHA1DeFichero(ficheroContenido.getAbsolutePath(),"MD5") );
 
+                    tamanio = ficheroContenido.length();
+                    String sha1 = generarMD5oSHA1DeFichero(ficheroContenido.getAbsolutePath(), "SHA");
+                    String md5 = generarMD5oSHA1DeFichero(ficheroContenido.getAbsolutePath(), "MD5");
+
+                    infoFicheros[indice][0] = indice + 1; // ID
+                    infoFicheros[indice][1] = s; // Nombre
+                    infoFicheros[indice][2] = dia + "-" + mes + "-" + year + " " + hora + ":" + minuto + ":" + segundo; // Fecha
+                    infoFicheros[indice][3] = tamanio; // Tamaño
+                    infoFicheros[indice][4] = sha1; // SHA1
+                    infoFicheros[indice][5] = md5; // MD5
+                    indice++;
                 }
             }
         }
-        return null;
+        return infoFicheros;
     }
     private static String generarMD5oSHA1DeFichero(String file, String algoritmo){
         String hash = "";
@@ -84,10 +91,6 @@ public class AnalizadorFicheros {
                     hash += Integer.toHexString((resumen[i] >> 4) & 0xf);
                     hash += Integer.toHexString(resumen[i] & 0xf);
                 }
-                System.out.println("Resumen "+algoritmo+": " + hash);
-
-
-
 
 
             }
@@ -100,6 +103,17 @@ public class AnalizadorFicheros {
         catch(java.security.NoSuchAlgorithmException nsae) {}
         return hash;
 
+    }
+    public static void main(String[] args) {//Solo para pruebas, borrar antes de enviar
+
+        String rutaDeEjemplo = "C:\\_Pruebas_Programacion";
+        Object[][] resultados = analizarRuta(rutaDeEjemplo);
+        for (Object[] fila : resultados) {
+            for (Object valor : fila) {
+                System.out.print(valor + "\t");
+            }
+            System.out.println();
+        }
     }
 
 }

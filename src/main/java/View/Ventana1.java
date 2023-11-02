@@ -3,6 +3,7 @@ package View;
 import Controller.AnalizadorFicheros;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -18,6 +19,11 @@ public class Ventana1 extends JFrame {
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         textFieldRutaActual.setText(rutaAAnalizar);
+        String[] nomColumnas = {"ID", "Nombre", "Fecha creación", "Tamaño", "SHA-1", "MD5"};
+        Object[][] matrizDatos = AnalizadorFicheros.analizarRuta(textFieldRutaActual.getText());
+        DefaultTableModel dtm = new DefaultTableModel(matrizDatos, nomColumnas);
+        table1.setModel(dtm);
+        table1.repaint();
         examinarButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -41,9 +47,20 @@ public class Ventana1 extends JFrame {
         analizarButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                AnalizadorFicheros.analizarRuta(textFieldRutaActual.getText());
-            }
+                llenarTabla(matrizDatos);
+
+            };
         });
+
+
+
+
+    }
+    public void llenarTabla(Object[][] data) {
+        DefaultTableModel model = (DefaultTableModel) table1.getModel();
+        for (Object[] fila : data) {
+            model.addRow(fila);
+        }
     }
 
     private JTextField textFieldRutaActual;
@@ -69,6 +86,7 @@ public class Ventana1 extends JFrame {
 
     public static void main(String[] args) {
         new Ventana1().setVisible(true);
+
 
 
     }
