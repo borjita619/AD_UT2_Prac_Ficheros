@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="810b8fae-bfdd-443c-8a15-75d9d32a536b" name="Changes" comment="Cambios en los botones">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/AnalizadorFicheros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/AnalizadorFicheros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/GestorEventosSAX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/GestorEventosSAX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/GestorFicheros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/GestorFicheros.java" afterDir="false" />
+    <list default="true" id="810b8fae-bfdd-443c-8a15-75d9d32a536b" name="Changes" comment="Consigo que funcione el analizar">
       <change beforePath="$PROJECT_DIR$/src/main/java/View/Ventana1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/Ventana1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +103,7 @@
       <workItem from="1698658031152" duration="984000" />
       <workItem from="1698659358462" duration="964000" />
       <workItem from="1698913811821" duration="5297000" />
-      <workItem from="1698941992970" duration="6827000" />
+      <workItem from="1698941992970" duration="7130000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion de repositorio">
       <option name="closed" value="true" />
@@ -149,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698919354919</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Consigo que funcione el analizar">
+      <option name="closed" value="true" />
+      <created>1698953940555</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1698953940555</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +175,7 @@
     <MESSAGE value="Cambio temática trabajo a máquinas gimnasio" />
     <MESSAGE value="Interfaz creada" />
     <MESSAGE value="Funciona analizar y hash por consola" />
-    <option name="LAST_COMMIT_MESSAGE" value="Funciona analizar y hash por consola" />
+    <MESSAGE value="Consigo que funcione el analizar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Consigo que funcione el analizar" />
   </component>
 </project>

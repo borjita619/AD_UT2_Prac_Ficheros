@@ -20,10 +20,7 @@ public class Ventana1 extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         textFieldRutaActual.setText(rutaAAnalizar);
         String[] nomColumnas = {"ID", "Nombre", "Fecha creación", "Tamaño", "SHA-1", "MD5"};
-        Object[][] matrizDatos = AnalizadorFicheros.analizarRuta(textFieldRutaActual.getText());
-        DefaultTableModel dtm = new DefaultTableModel(matrizDatos, nomColumnas);
-        table1.setModel(dtm);
-        table1.repaint();
+        llenarTabla(nomColumnas);
         examinarButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -42,12 +39,13 @@ public class Ventana1 extends JFrame {
                         textFieldRutaActual.setText(fileName.getAbsolutePath());
                     }
                 }
+                llenarTabla(nomColumnas);
             }
         });
         analizarButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                llenarTabla(matrizDatos);
+                llenarTabla(nomColumnas);
 
             };
         });
@@ -56,11 +54,11 @@ public class Ventana1 extends JFrame {
 
 
     }
-    public void llenarTabla(Object[][] data) {
-        DefaultTableModel model = (DefaultTableModel) table1.getModel();
-        for (Object[] fila : data) {
-            model.addRow(fila);
-        }
+    public void llenarTabla(String[] nomColumnas) {
+        Object[][] matrizDatos = AnalizadorFicheros.analizarRuta(textFieldRutaActual.getText());
+        DefaultTableModel dtm = new DefaultTableModel(matrizDatos, nomColumnas);
+        table1.setModel(dtm);
+        table1.repaint();
     }
 
     private JTextField textFieldRutaActual;
