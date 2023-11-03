@@ -104,16 +104,6 @@ public class AnalizadorFicheros {
         return hash;
 
     }
-    public static void main(String[] args) {//Solo para pruebas, borrar antes de enviar
 
-        String rutaDeEjemplo = "C:\\_Pruebas_Programacion";
-        Object[][] resultados = analizarRuta(rutaDeEjemplo);
-        for (Object[] fila : resultados) {
-            for (Object valor : fila) {
-                System.out.print(valor + "\t");
-            }
-            System.out.println();
-        }
-    }
 
 }
